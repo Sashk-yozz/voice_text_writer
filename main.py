@@ -5,11 +5,13 @@ import webbrowser
 
 engine = pyttsx3.init()
 
+
 def sayToMe(talk):
     engine.say(talk)
     engine.runAndWait()
 
-sayToMe("Привет всем! У нас все работает отлично")
+
+sayToMe("Привет всем!")
 sayToMe("Скажите хоть что-то")
 
 record = sr.Recognizer()
@@ -30,7 +32,7 @@ while True:
                 print(str_date)
                 sayToMe(str_date)
             elif result == "открой веб-сайт":
-                webbrowser.open("https://itproger.com")
+                webbrowser.open("https://www.google.com/")
             elif result == "write file":
                 file = open('text.txt', 'w')
                 print("Что записать в файл?")
